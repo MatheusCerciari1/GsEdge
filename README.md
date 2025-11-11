@@ -37,3 +37,43 @@ Promover pausas inteligentes;
 Evitar fadiga e má postura;
 
 Melhorar a ergonomia e produtividade no ambiente de trabalho.
+
+
+Codigo arduino: 
+
+#define BUTTON_PIN 15
+#define LED_PIN 2
+#define BUZZER_PIN 4
+
+bool lastButtonState = HIGH;
+unsigned long lastPressTime = 0;
+const unsigned long pressCooldown = 5000; // 5 segundos entre alertas
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(BUZZER_PIN, OUTPUT);
+  Serial.begin(115200);
+  Serial.println("Sistema de fadiga e postura iniciado");
+}
+
+void loop() {
+  bool buttonState = digitalRead(BUTTON_PIN);
+
+  // Quando o botão for pressionado
+  if (buttonState == LOW && lastButtonState == HIGH) {
+    unsigned long currentTime = millis();
+    if (currentTime - lastPressTime > pressCooldown) {
+      Serial.println("⚠️ Fadiga detectada!");
+      digitalWrite(LED_PIN, HIGH);
+      tone(BUZZER_PIN, 1000); // 🔊 som audível
+      delay(1500);
+      noTone(BUZZER_PIN);     // 🔇 para o som
+      digitalWrite(LED_PIN, LOW);
+      lastPressTime = currentTime;
+    }
+  }
+
+  lastButtonState = buttonState;
+}
+
