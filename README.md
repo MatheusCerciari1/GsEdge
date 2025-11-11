@@ -1,12 +1,12 @@
-🧠 Sistema de Monitoramento de Fadiga e Postura
+#🧠 Sistema de Monitoramento de Fadiga e Postura
 Saúde e bem-estar no ambiente de trabalho
-📋 Descrição do Projeto
+#📋 Descrição do Projeto
 
 O projeto propõe um sistema simples e acessível de monitoramento de fadiga e postura, voltado à saúde e bem-estar no ambiente de trabalho.
 
 A solução simula o funcionamento de um sistema ergonômico inteligente, que detecta sinais de fadiga e alerta o usuário a realizar pausas inteligentes e corrigir a postura, prevenindo problemas físicos e melhorando a produtividade.
 
-⚙️ Funcionamento do Sistema
+#⚙️ Funcionamento do Sistema
 
 O sistema foi desenvolvido e simulado no Wokwi e integrado ao Node-RED, permitindo a visualização de dados e alertas em tempo real.
 
@@ -22,7 +22,7 @@ Envia os dados para o Node-RED, registrando o alerta no dashboard.
 
 Essas ações representam o momento em que o sistema detecta sinais de cansaço ou má postura e recomenda pausas.
 
-🧩 Tecnologias Utilizadas
+#🧩 Tecnologias Utilizadas
 
 Wokwi – Simulação do circuito eletrônico (sem uso físico de Arduino)
 
@@ -34,7 +34,7 @@ Arduino IDE / C++ – Lógica de programação embarcada
 
 Dashboard Node-RED – Visualização de histórico e alertas
 
-📡 Comunicação MQTT / HTTP
+#📡 Comunicação MQTT / HTTP
 
 A simulação no Node-RED representa o envio dos dados de forma HTTP (ou MQTT em projetos reais), simulando a transmissão de informações como:
 
@@ -46,7 +46,7 @@ alertas_totais: 7
 
 Esses dados podem ser utilizados para gerar gráficos, contadores e estatísticas no dashboard.
 
-🧠 Explicação Técnica
+#🧠 Explicação Técnica
 
 O botão no circuito simula o sensor de fadiga (poderia ser substituído futuramente por sensores reais de movimento, piscar de olhos ou postura).
 
@@ -56,10 +56,10 @@ O buzzer emite o som de aviso para o colaborador.
 
 O Node-RED registra e exibe os dados em tempo real, mostrando o histórico de alertas emitidos.
 
-🖥️ Instruções de Uso e Replicação
+#🖥️ Instruções de Uso e Replicação
 1. Simulação no Wokwi
 
-Acesse o link do projeto no Wokwi:
+#Acesse o link do projeto no Wokwi:
 👉 Wokwi - Sistema de Fadiga e Postura
 
 Passos:
@@ -80,7 +80,7 @@ Configure o Dashboard para exibir o número de alertas e o histórico.
 
 Execute o fluxo e visualize os dados sendo atualizados a cada alerta.
 
-💡 Código-Fonte (Arduino)
+#💡 Código-Fonte (Arduino)
 
 Arquivo principal: monitor_fadiga.ino
 
@@ -125,11 +125,11 @@ Matheus Cerciari Reis	565817
 Luis Gustavo Vasconcelos Costa	566023
 🔗 Links Importantes
 
-🎥 Vídeo Explicativo: YouTube - Sistema de Fadiga e Postura
+#🎥 Vídeo Explicativo: YouTube - Sistema de Fadiga e Postura
 
-💻 Simulação Wokwi: https://wokwi.com/projects/447335537270901761
+#💻 Simulação Wokwi: https://wokwi.com/projects/447335537270901761
 
-🩺 Impacto e Relevância
+#🩺 Impacto e Relevância
 
 O sistema contribui diretamente para o tema “Saúde e bem-estar no trabalho”, abordando:
 
